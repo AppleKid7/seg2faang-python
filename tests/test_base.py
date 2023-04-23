@@ -1,5 +1,5 @@
-from project_name.base import NAME
+from seg2faang_python.base import NAME
 
 
 def test_base():
-    assert NAME == "project_name"
+    assert NAME == "seg2faang_python"

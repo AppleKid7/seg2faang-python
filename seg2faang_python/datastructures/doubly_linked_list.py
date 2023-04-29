@@ -12,7 +12,7 @@ class DoublyLinkedList:
 
     def prepend(self, new_data):
         to_insert = ListNode(new_data)
-        was_empty = self.head == None and self.tail == None
+        was_empty = self.head is None and self.tail is None
         to_insert.next = self.head
         if self.head is not None:
             self.head.prev = to_insert
@@ -70,7 +70,6 @@ class DoublyLinkedList:
         node_to_delete.next = None
         node_to_delete.prev = None
 
-
     def __str__(self):
         cur = self.head
         acc = ''
@@ -85,17 +84,17 @@ class DoublyLinkedList:
 
 def main():
     ll = DoublyLinkedList()
-    ll.append(1)
+    ll.append(1) # 1
     print(ll)
-    ll.prepend(2)
+    ll.prepend(2) # 2, 1
     print(ll)
-    ll.insert_after(ll.tail, 3)
+    ll.insert_after(ll.tail, 3) # 2, 1, 3
     print(ll)
-    ll.delete(ll.head.next)
+    ll.delete(ll.head.next) # 2, 3
     print(ll)
-    ll.delete(ll.head)
+    ll.delete(ll.head) # 3
     print(ll)
-    ll.delete(ll.tail)
+    ll.delete(ll.tail) # ""
     print(ll)
 
 if __name__ == '__main__':

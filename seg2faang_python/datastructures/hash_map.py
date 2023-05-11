@@ -45,7 +45,7 @@ class HashMap:
         return self.size
 
 def main():
-    
+    pass
 
 if __name__ == '__main__':
     main()
